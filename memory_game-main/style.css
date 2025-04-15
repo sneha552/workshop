@@ -1,0 +1,88 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #f5d5ec, #dfe9f3);
+    margin: 0;
+    padding: 2rem;
+  }
+  
+  h1 {
+    color: #6b2b7b;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .scoreboard {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-top: 1rem;
+    font-size: 1rem;
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background-color: #732d91;
+  }
+  
+  .game-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+    margin: auto;
+    gap: 15px;
+  }
+  
+  .card {
+    width: 80px;
+    height: 80px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  .card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .card-front {
+    background-color: #f8f9fa;
+  }
+  
+  .card-back {
+    background-color: #8e44ad;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
